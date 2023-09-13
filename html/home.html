@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <header>
+      <nav x-data="{ expanded: false }">
+        <div class="nav-parent" @click="expanded = ! expanded">
+          <div class="nav-brand">
+            <p>Indonary</p>
+          </div>
+          <ul class="nav-group">
+            <li class="nav-item">
+              <a href="./home.html" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="./Product.html" class="nav-link">PRODUCT</a>
+            </li>
+            <li class="nav-item">
+              <a href="./about.html" class="nav-link">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a href="./contact.html" class="nav-link">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="nav-parent-collapse" x-show="expanded" x-collapse>
+                <ul class="nav-group-collapse">
+                    <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">PRODUCT</a></li>
+                    <li class="nav-item"><a href="./about.html" class="nav-link">ABOUT US</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+                </ul>
+            </div> -->
+      </nav>
+      
+    </header>
+
+    <!-- content -->
+    <section class="profile">
+      <div class="profile-text">
+        <h1>Indonary</h1>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+          dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+          quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+          aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+          exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+          ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in
+          ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+          qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p>
+      </div>
+      <div class="profile-img">
+        <img
+          src="../pict/Logo merah.png"
+          alt="Logo Indonary"
+        />
+      </div>
+    </section>
+
+    <section class="team">
+      <div class="team-title">
+        <h1>TOP MENU</h1>
+      </div>
+      <div class="team-profile">
+        <div class="team-img">
+          <div class="team-img-item">
+            <img src="../pict/menu-ayam betutu bali.jpg" alt="profile" />
+            <p>Ayam betutu bali</p>
+          </div>
+          <div class="team-img-item">
+            <img src="../pict/Menu - gado gado.jpg"" alt="profile" />
+            <p>gado-gado</p>
+          </div>
+          <div class="team-img-item">
+            <img src="../pict/Menu - Lodho Trenggalek.jpg" alt="profile" />
+            <p>Lodho Trenggalek</p>
+          </div>
+          <div class="team-img-item">
+            <img src="../pict/Menu - sate lilit bali.jpg" alt="profile" />
+            <p>sate lilit bali</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2 class="riview-pelanggan-header">REVIEW PELANGGAN</h2>
+      <div class="name-field-wrapper">
+        <label for="name" class="name-field">NAME : </label>
+        <input type="text" id="name" class="name-field-input" />
+      </div>
+      <br />
+      <div class="email-field-wrapper">
+        <label for="email" class="email-field">EMAIL :</label>
+        <input type="email" id="email" class="email-field-input" />
+      </div>
+      <br />
+      <div class="massage-field-wrapper">
+        <label for="massage" class="masage-field">MESSAGE : </label>
+        <textarea class="massage-field-input"></textarea>
+      </div>
+      <br />
+      <button type="submit">SUBMIT</button>
+    </section>
+
+    <footer>
+      <div class="contact">
+        <div class="contact-title">
+          <h5>Contact Us</h5>
+        </div>
+        <div class="contact-list">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <img src="../pict/tlp.png" alt="phone" />
+            </div>
+            <div class="contact-text">
+              <p>+62 812 3456 7890</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <img src="../pict/email.png" alt="mail" />
+            </div>
+            <div class="contact-text">
+              <p>indonary@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact">
+        <div class="contact-title">
+          <h5>Socials</h5>
+        </div>
+        <div class="contact-list">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <img src="../pict/instagram.png" alt="phone" />
+            </div>
+            <div class="contact-text">
+              <p>Indonary</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <img src="../pict/twitter.png" alt="mail" />
+            </div>
+            <div class="contact-text">
+              <p>Indonary</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

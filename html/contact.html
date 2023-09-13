@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <!-- <script defer src="./js/collapse.min.js"></script>
+    <script defer src="./js/core.min.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <nav x-data="{ expanded: false }">
+            <div class="nav-parent" @click="expanded = ! expanded">
+                <div class="nav-brand">
+                    <p>
+                        Indonary
+                    </p>
+                </div>
+                <ul class="nav-group">
+                    <li class="nav-item"><a href="./home.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="./Product.html" class="nav-link">PRODUCT</a></li>
+                    <li class="nav-item"><a href="./about.html" class="nav-link">ABOUT US</a></li>
+                    <li class="nav-item"><a href="./contact.html" class="nav-link">CONTACT</a></li>
+                </ul>
+            </div>
+            <!-- <div class="nav-parent-collapse" x-show="expanded" x-collapse>
+                <ul class="nav-group-collapse">
+                    <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">PRODUCT</a></li>
+                    <li class="nav-item"><a href="./about.html" class="nav-link">ABOUT US</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+                </ul>
+            </div> -->
+        </nav>
+        <div class="hero">
+            <div class="hero-text">CONTACT US</div>
+        </div>
+    </header>
+    <main>
+        <section class="contact-info">
+            <div class="maps" style="text-decoration:none; overflow:hidden;max-width:90%;width:500px;height:500px;">
+                <div id="google-maps-display" style="height:100%; width:100%;max-width:100%;"><iframe
+                        style="height:100%;width:100%;border:0;" frameborder="0"
+                        src="https://www.google.com/maps/embed/v1/place?q=RevoU,+Go+Work,+Jalan+Doktor+Ide+Anak+Agung+Gde+Agung,+RT.5/RW.2,+Kuningan,+East+Kuningan,+Jakarta,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                </div>
+                <style>
+                    #google-maps-display img.text-marker {
+                        max-width: none !important;
+                        background: none !important;
+                    }
+
+                    img {
+                        max-width: none
+                    }
+                </style>
+            </div>
+            <div class="form">
+                <form action="#" method="post">
+                    <div class="form-title">
+                        <h3>Any Question? <br> Write Down And Send Us</h3>
+                    </div>
+                    <div class="form-body">
+                        <div class="form-item">
+                            <label for="name">NAME</label><br>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="form-item">
+                            <label for="email">EMAIL</label><br>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="form-item">
+                            <label for="message">MESSAGE</label><br>
+                            <textarea name="message" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="form-item">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="contact-info" style="flex-wrap: wrap;">
+            <div class="contact-card">
+                <div class="contact-card-title">
+                    <h3>Head Office</h3>
+                </div>
+                <div class="contact-card-body">
+                    <div class="contact-card-item">
+                        <div class="contact-card-icon">
+                            <img src="../pict/location.png" alt="office">
+                        </div>
+                        <div class="contact-card-text">
+                            <p>Indonary</p>
+                        </div>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-card-description">
+                            <p>
+                                Jalan Doktor Ide Anak Agung Gde Agung, RT.5/RW.2, Kuningan, East
+                                Kuningan, Jakarta, Indonesia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-card-title">
+                    <h3>Make a Call</h3>
+                </div>
+                <div class="contact-card-body">
+                    <div class="contact-card-item">
+                        <div class="contact-card-icon">
+                            <img src="../pict/tlp.png" alt="office">
+                        </div>
+                        <div class="contact-card-text">
+                            <p>+62 81219893230</p>
+                        </div>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-card-description">
+                            <p>
+                                Mon - Sat 09am - 08pm
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-card-title">
+                    <h3>Send a Mail</h3>
+                </div>
+                <div class="contact-card-body">
+                    <div class="contact-card-item">
+                        <div class="contact-card-icon">
+                            <img src="../pict/email2.png" alt="office">
+                        </div>
+                        <div class="contact-card-text">
+                            <p>Mail us</p>
+                        </div>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-card-description">
+                            <p>
+                                info@nusantarafoodasia.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contact">
+            <div class="contact-title">
+                <h5>Contact Us</h5>
+            </div>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <img src="../pict/tlp.png" alt="phone">
+                    </div>
+                    <div class="contact-text">
+                        <p>+62 812 3456 7890</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <img src="../pict/email.png" alt="mail">
+                    </div>
+                    <div class="contact-text">
+                        <p>indonary@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="contact-title">
+                <h5>Socials</h5>
+            </div>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <img src="../pict/instagram.png" alt="phone">
+                    </div>
+                    <div class="contact-text">
+                        <p>Indonary</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <img src="../pict/twitter.png" alt="mail">
+                    </div>
+                    <div class="contact-text">
+                        <p>Indonary</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
