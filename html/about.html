@@ -1,162 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <title>About</title>
-    <link rel="stylesheet" href="../css/about.css">
-    <!-- <script defer src="./js/collapse.min.js"></script>
-    <script defer src="./js/core.min.js"></script> -->
-</head>
-
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Indonary.id | About Us</title>
+        <link rel="icon" href="../Image/Logo merah.png" type="image">
+        <link rel="stylesheet" href="../css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
 <body>
-    <header>
-        <nav x-data="{ expanded: false }">
-            <div class="nav-parent" @click="expanded = ! expanded">
-                <div class="nav-brand">
-                    <p>
-                        Indonary
-                    </p>
-                </div>
-                <ul class="nav-group">
-                    <li class="nav-item"><a href="./home.html" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="./Product.html" class="nav-link">PRODUCT</a></li>
-                    <li class="nav-item"><a href="./about.html" class="nav-link">ABOUT US</a></li>
-                    <li class="nav-item"><a href="./contact.html" class="nav-link">CONTACT</a></li>
-                </ul>
-            </div>
-            <!-- <div class="nav-parent-collapse" x-show="expanded" x-collapse>
-                <ul class="nav-group-collapse">
-                    <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">PRODUCT</a></li>
-                    <li class="nav-item"><a href="./about.html" class="nav-link">ABOUT US</a></li>
-                    <li class="nav-item"><a href="./contact.html" class="nav-link">CONTACT</a></li>
-                </ul>
-            </div> -->
+	
+<!-----buat desain header------->    
+<div class="header">
+    <div class="navbar">
+        <div class="logo"> 
+            <a href="index.html"><img src="../Image/Logo merah.png" width="57px"></a>
+            <a href="index.html"><img src="../Image/logo-putih.png" width="150px"></a>
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="Home.html">Home </a> </li>
+                <li><a href="Product.html">Product </a> </li>
+                <li><a href="About.html">About Us </a> </li>
+                <li><a href="Contact.html">Contact Us </a> </li>
+            </ul>
         </nav>
-        <div class="hero">
-            <div class="hero-text">ABOUT US</div>
-            <div class="hero-text">
-                <p>Welcome to Indonary! <br>
-                    <span style="font-size: 30px; font-weight: 200;">(Indonesian Culinary)</span>
-                </p>
-            </div>
-        </div>
-    </header>
+        <img src="../Image/pngegg.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
+
     <main>
-        <section class="profile">
-            <div class="profile-text">
-                <h1>Profile</h1>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-                    veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
-                    commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-                    molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-            </div>
-            <div class="profile-img">
-                <img src="../pict/tim.jpg"
-                    alt="profile">
-            </div>
-        </section>
-        <section class="team">
-            <div class="team-title">
-                <h1>Our Team</h1>
-            </div>
-            <div class="team-profile">
-                <div class="team-img">
-                    <div class="team-img-item">
-                        <img src="../pict/profilteam/raja.jpg"
-                            alt="profile">
-                        <p>Greesy Raja </p>
-                    </div>
-                    <div class="team-img-item">
-                        <img src="../pict/profilteam/nandita.jpeg"
-                            alt="profile">
-                        <p>Nandita</p>
-                    </div>
-                    <div class="team-img-item">
-                        <img src="../pict/profilteam/hanif.jpeg"
-                            alt="profile">
-                        <p>Hanif Rizqi</p>
-                    </div>
-                    <div class="team-img-item">
-                        <img src="../pict/profilteam/luthfi.jpg"
-                            alt="profile">
-                        <p>luthfi Mahmudah</p>
-                    </div>
-                    <div class="team-img-item">
-                        <img src="../pict/profilteam/syifaa.jpg"
-                            alt="profile">
-                        <p>Syifa' Auliya </p>
-                    </div>
-                    <div class="team-img-item">
-                        <img src="../pict/profilteam/martyn.jpg"
-                            alt="profile">
-                        <p>Martyn Christian</p>
-                    </div>
-                    <div class="team-img-item">
-                        <img src="../pict/profilteam/narisya.JPG"
-                            alt="profile">
-                        <p>Narisya Zahrani</p>
-                    </div>
-                </div>
+        <h1 class="title">About Company</h1>
+        <section id="about">
+            <div class="container-about">
+                <p>Selamat datang di Indonary!</p>
+                <br>
+                <p>Kami adalah penyedia cita rasa khas Nusantara yang mengajak Anda dalam petualangan kuliner tak terlupakan melalui hidangan-hidangan autentik yang menggoda selera. Sebagai pecinta makanan, kami memahami bahwa kuliner bukan hanya tentang rasa, tetapi juga tentang cerita, warisan, dan budaya.</p>
+                <br>
+                <p>Kami berkomitmen untuk memelihara kekayaan ragam kuliner Indonesia yang sangat beragam. Setiap hidangan yang kami sajikan adalah potongan kecil dari kisah dan tradisi kuno yang telah diwariskan dari generasi ke generasi. Di Indonary, kami merangkul keragaman rasa, bahan-bahan segar, dan teknik memasak yang autentik untuk menghadirkan hidangan-hidangan yang tak tertandingi.</p>
+                <br>
+                <p>Apa yang membedakan kami adalah tekad kami untuk menjaga bumbu-bumbu rahasia, teknik memasak tradisional, dan sentuhan personal dalam setiap hidangan. Kami berusaha memberikan pengalaman kuliner yang tak hanya menggoyang lidah Anda, tetapi juga menyentuh hati Anda.</p>
+                <br>
+                <p>Tim kami terdiri dari koki berbakat yang ahli dalam mengolah bahan-bahan terbaik, serta penyelidik kuliner yang selalu mencari inspirasi baru di seluruh penjuru Nusantara. Kami sangat bersemangat untuk berbagi kecintaan kami pada makanan melalui kreasi kami yang tiada henti.</p>
+                <br>
+                <p>Terimakasih telah menjadi bagian dari perjalanan kami untuk memperkenalkan kekayaan kuliner Nusantara kepada dunia. Kami berharap Anda menikmati setiap gigitan, dan semoga Anda merasakan sejumput keindahan Indonesia dalam setiap hidangan kami.</p>
+                <br>
+                <p>Selamat menikmati, bersama kami di Indonary.</p>
             </div>
         </section>
-    </main>
-    <footer>
-        <div class="contact">
-            <div class="contact-title">
-                <h5>Contact Us</h5>
-            </div>
-            <div class="contact-list">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <img src="../pict/tlp.png" alt="phone">
+    
+        <h2 class="title">Our Team</h2>
+        <div class="container-team">
+            <div class="row-team">
+                <div class="team-member">
+                    <div class="circle-frame">
+                        <img src="../Image/nandita.jpeg" alt="Foto Tim 1">
                     </div>
-                    <div class="contact-text">
-                        <p>+62 812 3456 7890</p>
-                    </div>
+                    <h3>Nandita</h3>
+                    <p class="team">Project Leader</p>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <img src="../pict/email.png" alt="mail">
+                <div class="team-member">
+                    <div class="circle-frame">
+                        <img src="../Image/narisya.jpg" alt="Foto Tim 2">
                     </div>
-                    <div class="contact-text">
-                        <p>indonary@gmail.com</p>
+                    <h3>Narisya Zahrani</h3>
+                    <p class="team">Front End</p>
+                </div>
+                <div class="team-member">
+                    <div class="circle-frame">
+                        <img src="../Image/syifaa.jpg" alt="Foto Tim 3">
                     </div>
+                    <h3>Syifa' Auliya</h3>
+                    <p class="team">Back End</p>
+                </div>
+                <div class="team-member">
+                    <div class="circle-frame">
+                        <img src="../Image/luthfi.jpg" alt="Foto Tim 4">
+                    </div>
+                    <h3>Lutfi Mahmudah</h3>
+                    <p class="team">Quality Assurance</p>
+                </div>
+                <div class="team-member">
+                    <div class="circle-frame">
+                        <img src="../Image/hanif.jpeg" alt="Foto Tim 5">
+                    </div>
+                    <h3>Hanif Rizqi</h3>
+                    <p class="team">Front End</p>
+                </div>
+                <div class="team-member">
+                    <div class="circle-frame">
+                        <img src="../Image/raja.jpg" alt="Foto Tim 1">
+                    </div>
+                    <h3>Greesy Raja</h3>
+                    <p class="team">Back End</p>
+                </div>
+                <div class="team-member">
+                    <div class="circle-frame">
+                        <img src="../Image/martyn.jpg" alt="Foto Tim 1">
+                    </div>
+                    <h3>Martyn Christian</h3>
+                    <p class="team">Quality Assurance</p>
                 </div>
             </div>
         </div>
-        <div class="contact">
-            <div class="contact-title">
-                <h5>Socials</h5>
-            </div>
-            <div class="contact-list">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <img src="../pict/instagram.png" alt="phone">
-                    </div>
-                    <div class="contact-text">
-                        <p>Indonary</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <img src="../pict/twitter.png" alt="mail">
-                    </div>
-                    <div class="contact-text">
-                        <p>Indonary</p>
-                    </div>
-                </div>
-            </div>
+    </main>      
+        
+<!---------footer----->
+<div class="footer">
+    <div class="navbar-2">
+        <div class="footer-col-1">
+            <img src="../Image/logo-putih.png">
         </div>
-    </footer>
+        <div class="footer-col-2">
+            <h3>Contact Us</h3>
+            <ul>
+                <li>
+                    <i class="fa fa-phone"></i>
+                    <a href="wa.me/6285241542496">  +62 852 4154 2496</a> 
+                </li>
+                <br>
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="https://www.indonary.id">  indonary@gmail.com</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-col-3">
+            <h3>Socials</h3>
+            <ul>
+                <li>
+                    <i class="fa fa-instagram"></i>
+                    <a href="https://www.instagram.com/indonary.id/">  @indonary.id</a> 
+                </li>
+                <br>
+                <li>
+                    <i class="fa fa-facebook"></i>
+                    <a href="https://www.facebook.com/indonary.id/">  indonary.id</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>

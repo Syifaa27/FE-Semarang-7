@@ -2,59 +2,48 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Product
-        </title>
-        <link rel="stylesheet" href="../css/product.css">
+        <title>Indonary.id | Product</title>
+        <link rel="icon" href="../Image/Logo merah.png" type="image">
+        <link rel="stylesheet" href="../css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../js/product.js"></script>
+    <title>Open Text on Button Click</title>
     </head>
 <body>
-    <header>
-        <nav x-data="{ expanded: false }">
-            <div class="nav-parent" @click="expanded = ! expanded">
-                <div class="nav-brand">
-                    <p>
-                        Indonary
-                    </p>
-                </div>
-                <ul class="nav-group">
-                    <li class="nav-item"><a href="./home.html" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="./Product.html" class="nav-link">PRODUCT</a></li>
-                    <li class="nav-item"><a href="./about.html" class="nav-link">ABOUT US</a></li>
-                    <li class="nav-item"><a href="./contact.html" class="nav-link">CONTACT</a></li>
-                </ul>
-            </div>
-            <!-- <div class="nav-parent-collapse" x-show="expanded" x-collapse>
-                <ul class="nav-group-collapse">
-                    <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">PRODUCT</a></li>
-                    <li class="nav-item"><a href="./about.html" class="nav-link">ABOUT US</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
-                </ul>
-            </div> -->
-        </nav>
-    </header>
     
-<!-- ---Desain Header-
+<!-----Desain Header--->
 <div class="header">
-    <div class="container">
-        <div class="navbar">
-            <div class="logo"> 
-                <a href="index.html"><img src="image/Logo merah.png" width="57px"></a>
-                <a href="index.html"><img src="image/logo-putih.png" width="150px"></a>
-            </div>
-            
-            <form class="search-box" action="search.html" method="get">
-                <input type="text" name="q" placeholder="Cari Menu di Indonary..">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
+    <div class="navbar">
+        <div class="logo"> 
+            <a href="index.html"><img src="../Image/Logo merah.png" width="57px"></a>
+            <a href="index.html"><img src="../Image/logo-putih.png" width="150px"></a>
         </div>
+            
+        <div class="search-box" action="search.html" method="get">
+            <input type="text" id="searchInput" placeholder="Cari Produk...">
+            <button onclick="searchProducts()">Cari</button>
+        </div>
+
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="Home.html">Home </a> </li>
+                <li><a href="Product.html">Product </a> </li>
+                <li><a href="About.html">About Us </a> </li>
+                <li><a href="Contact.html">Contact Us </a> </li>
+            </ul>
+        </nav>
+        <img src="../Image/pngegg.png" class="menu-icon" onclick="menutoggle()">
     </div>
-</div> -->
+</div>
 
 <div class="container-2">
     <td>
-        <label>Kategori Menu : </label>
+        <label class="label-menu">Kategori Menu : </label>
    </td>
    <td>
         <select name="menu_khas">
@@ -62,9 +51,10 @@
             <option>Makassar</option>
             <option>Bali</option>
             <option>Trenggalek</option>
-            <option>Padang</option>
+            <option>Magetan</option>
             <option>Jakarta</option>
-            <option>Palembang</option>
+            <option>Lampung</option>
+            <option>Jepara</option>
         </select>
     </td>
     <td>
@@ -77,453 +67,88 @@
 </div>
 
 <!---------Cart Details----->
-<div class="container">
-    <h2>Menampilkan semua kategori menu..</h2>
-    <div class="row">
-            <div class="col-4">
-                <img src="../pict/Menu - coto makassar.png">
-                <div class="product-info">
-                    <h3 class="product-name">Coto Makassar</h3>
-                    <h4 class="product-price" kategori="makassar" data-price="30.000">Rp. 30.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-            <div class="col-4">
-                <img src="../pict/Menu - es pisang ijo.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Es Pisang Ijo</h3>
-                    <h4 class="product-price" kategori="makassar" data-price="20.000">Rp. 20.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
+<div class="food-container" style="display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 20px;
+justify-items: center;">
 
-            <div class="col-4">
-                <img src="../pict/Menu - sarebba.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Sarebba</h3>
-                    <h4 class="product-price" kategori="makassar" data-price="15.000">Rp. 15.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - pindang serani jepara.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Pindang Serani</h3>
-                    <h4 class="product-price" kategori="jepara" data-price="20.000">Rp. 20.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - Soto Betawi.jpg.png">
-                <div class="product-info">
-                    <h3 class="product-name">Soto Betawi</h3>
-                    <h4 class="product-price" kategori="Betawi" data-price="30.000">Rp. 30.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - manco trenggalek.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Manco Trenggalek</h3>
-                    <h4 class="product-price" kategori="trenggalek" data-price="25.000">Rp. 25.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - sate lilit bali.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Sate Lilit Bali</h3>
-                    <h4 class="product-price" kategori="bali" data-price="30.000">Rp. 30.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-           <div class="col-4">
-                <img src="../pict/Menu - beras kencur trenggalek.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Beras Kencur</h3>
-                    <h4 class="product-price" kategori="trenggalek" data-price="20.000">Rp. 20.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - es gempol jepara.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Es Gempol</h3>
-                    <h4 class="product-price" kategori="jepara" data-price="15.000">Rp. 15.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/menu-ayam betutu bali.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Ayam Betutu</h3>
-                    <h4 class="product-price" kategori="bali" data-price="20.000">Rp. 20.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - durian kopi luwak.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Durian Kopi Luwak</h3>
-                    <h4 class="product-price" kategori="Betawi" data-price="20.000">Rp. 20.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - gado gado.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Gado-Gado</h3>
-                    <h4 class="product-price" kategori="trenggalek" data-price="25.000">Rp. 25.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - geguduh.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Geguduh</h3>
-                    <h4 class="product-price" kategori="trenggalek" data-price="15.000">Rp. 15.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - horok.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Horok-horok Jepara</h3>
-                    <h4 class="product-price" kategori="Jepara" data-price="30.000">Rp. 30.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - es kuwut bali.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Es Kuwet Bali</h3>
-                    <h4 class="product-price" kategori="bali" data-price="10.000">Rp. 10.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - seruit.jpg.png">
-                <div class="product-info">
-                    <h3 class="product-name">Seruit</h3>
-                    <h4 class="product-price" kategori="jepara" data-price="15.000">Rp. 15.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - ronde.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Ronde</h3>
-                    <h4 class="product-price" kategori="bali" data-price="20.000">Rp. 20.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - pecel.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Pecel</h3>
-                    <h4 class="product-price" kategori="Betawi" data-price="20.000">Rp. 20.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - tahu telur.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Tahu Telur</h3>
-                    <h4 class="product-price" kategori="trenggalek" data-price="25.000">Rp. 25.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <img src="../pict/Menu - Lodho Trenggalek.jpg">
-                <div class="product-info">
-                    <h3 class="product-name">Lodho Trenggalek</h3>
-                    <h4 class="product-price" kategori="trenggalek" data-price="25.000">Rp. 25.000</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="product-add">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span class="order">Order</span>
-                    </p>
-                </div>
-            </div>
+<!---------footer----->
+<div class="footer">
+    <div class="navbar-2">
+        <div class="footer-col-1">
+            <img src="../Image/logo-putih.png">
+        </div>
+        <div class="footer-col-2">
+            <h3>Contact Us</h3>
+            <ul>
+                <li>
+                    <i class="fa fa-phone"></i>
+                    <a href="wa.me/6285241542496">  +62 852 4154 2496</a> 
+                </li>
+                <br>
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="https://www.indonary.id">  indonary@gmail.com</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-col-3">
+            <h3>Socials</h3>
+            <ul>
+                <li>
+                    <i class="fa fa-instagram"></i>
+                    <a href="https://www.instagram.com/indonary.id/">  @indonary.id</a> 
+                </li>
+                <br>
+                <li>
+                    <i class="fa fa-facebook"></i>
+                    <a href="https://www.facebook.com/indonary.id/">  indonary.id</a> 
+                </li>
+            </ul>
         </div>
     </div>
 </div>
 
-<!---------footer----->
-<footer>
-    <div class="contact">
-        <div class="contact-title">
-            <h5>Contact Us</h5>
-        </div>
-        <div class="contact-list">
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <img src="../pict/tlp.png" alt="phone">
-                </div>
-                <div class="contact-text">
-                    <p>+62 812 3456 7890</p>
-                </div>
-            </div>
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <img src="../pict/email.png" alt="mail">
-                </div>
-                <div class="contact-text">
-                    <p>indonary@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="contact">
-        <div class="contact-title">
-            <h5>Socials</h5>
-        </div>
-        <div class="contact-list">
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <img src="../pict/instagram.png" alt="phone">
-                </div>
-                <div class="contact-text">
-                    <p>Indonary</p>
-                </div>
-            </div>
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <img src="../pict/twitter.png" alt="mail">
-                </div>
-                <div class="contact-text">
-                    <p>Indonary</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
 <!----java script toggle menu---->
 <script>
-    var MenuItems = document.getElementById("MenuItems");
-    MenuItems.style.maxHeight = "0px";
+    function sortMenuByCategory() {
+        var selectElement = document.querySelector('select[name="menu_khas"]');
+        var selectedCategory = selectElement.value.toLowerCase();
+        var products = document.querySelectorAll('.col');
 
-    function menutoggle() {
-        if (MenuItems.style.maxHeight === "0px") {
-            MenuItems.style.maxHeight = "200px";
-        } else {
-            MenuItems.style.maxHeight = "0px";
-        }
+        products.forEach(function(product) {
+            var productCategory = product.querySelector('.product-price').getAttribute('kategori').toLowerCase();
+
+            if (selectedCategory === 'semua' || productCategory === selectedCategory) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+
+    document.querySelector('select[name="menu_khas"]').addEventListener('change', sortMenuByCategory);
+    sortMenuByCategory(); // Call the function initially to filter based on the default category.
+
+    function searchProducts() {
+        // Dapatkan kata kunci pencarian dari input
+        var searchInput = document.getElementById('searchInput').value.toLowerCase();
+        
+        // Dapatkan semua elemen produk
+        var products = document.querySelectorAll('.col');
+
+        // Loop melalui produk dan periksa apakah nama produk cocok dengan kata kunci pencarian
+        products.forEach(function(product) {
+            var productName = product.querySelector('.product-name').textContent.toLowerCase();
+
+            if (productName.includes(searchInput)) {
+                product.style.display = 'block'; // Tampilkan produk yang cocok
+            } else {
+                product.style.display = 'none'; // Sembunyikan produk yang tidak cocok
+            }
+        });
     }
 </script>
-    
+
 </body>
 </html>

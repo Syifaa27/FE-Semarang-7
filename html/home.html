@@ -2,166 +2,247 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home</title>
-    <link rel="stylesheet" href="../css/about.css" />
-    <link rel="stylesheet" href="../css/home.css" />
+    <title>Indonary.id | Home</title>
+    <link rel="icon" href="../Image/Logo merah.png" type="image" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/review.js"></script>
   </head>
   <body>
-    <header>
-      <nav x-data="{ expanded: false }">
-        <div class="nav-parent" @click="expanded = ! expanded">
-          <div class="nav-brand">
-            <p>Indonary</p>
+    <!-----buat desain header------->
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="../Image/Logo merah.png" width="57px"
+          /></a>
+          <a href="index.html"
+            ><img src="../Image/logo-putih.png" width="150px"
+          /></a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="Home.html">Home </a></li>
+            <li><a href="Product.html">Product </a></li>
+            <li><a href="About.html">About Us </a></li>
+            <li><a href="Contact.html">Contact Us </a></li>
+          </ul>
+        </nav>
+        <img src="../Image/pngegg.png" class="menu-icon" onclick="menutoggle()" />
+      </div>
+    </div>
+
+    <!-----headline---->
+    <div class="offer">
+      <div class="row">
+        <div class="kolom-30">
+          <img src="../Image/Logo merah.png" class="offer-img" />
+        </div>
+        <div class="kolom-70">
+          <img src="../Image/Logo putih 2.png" class="offer-img" />
+          <h3>Menjelajahi Kelezatan Kuliner Nusantara</h3>
+          <br />
+          <p>
+            Selamat datang di Indonary, tempatnya para pecinta kuliner Nusantara
+            berkumpul untuk mengeksplorasi kekayaan rasa Indonesia! Indonary
+            adalah sebuah portal kuliner yang didedikasikan untuk menghadirkan
+            pengalaman kuliner Nusantara yang tak terlupakan. Dengan menyajikan
+            beragam hidangan dan cita rasa dari berbagai daerah di Indonesia,
+            kami mengajak Anda dalam perjalanan kuliner yang memikat.
+          </p>
+          <br />
+          <p>Apa yang Anda Temukan di Indonary?</p>
+          <span id="titik"></span>
+          <div id="informasi">
+            <li>
+              Resep-Resep Otentik: Di Indonary, kami mengumpulkan dan membagikan
+              resep-resep kuliner otentik dari seluruh Indonesia.
+            </li>
+            <br />
+            <li>
+              Cerita Kuliner: Setiap hidangan memiliki cerita uniknya sendiri.
+              Kami mengeksplorasi sejarah, asal-usul, dan konteks budaya di
+              balik setiap hidangan
+            </li>
+            <br />
+            <li>
+              Panduan Wisata Kuliner: Jika Anda ingin mencicipi kuliner
+              Nusantara secara langsung, kami juga menyediakan panduan wisata
+              kuliner. Temukan restoran, warung, atau pasar tradisional terbaik
+              di berbagai kota di Indonesia.
+            </li>
+            <br />
+            <li>
+              Artikel dan Berita Terkini: Kami menyediakan artikel dan berita
+              terkini seputar perkembangan kuliner di Indonesia. Dapatkan
+              informasi tentang tren makanan, festival kuliner, dan inovasi
+              terbaru dalam dunia kuliner.
+            </li>
           </div>
-          <ul class="nav-group">
-            <li class="nav-item">
-              <a href="./home.html" class="nav-link">HOME</a>
+          <button onclick="BacaSembunyi()" id="lihat-selengkapnya">
+            Selengkapnya
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-----produk Terbaru----->
+    <div class="team-title">
+      <h1>TOP MENU</h1>
+    </div>
+    <div class="small-container">
+      <div class="row">
+        <div class="top">
+          <img src="../Image/menu-ayam betutu bali.jpg" />
+          <h4>Ayam Betutut Bali</h4>
+        </div>
+        <div class="top">
+          <img src="../Image/Menu - coto makassar.png" />
+          <h4>Coto Makassar</h4>
+        </div>
+        <div class="top">
+          <img src="../Image/Menu - horok.jpg" />
+          <h4>Horok</h4>
+        </div>
+        <div class="top">
+          <img src="../Image/Menu - ronde.jpg" />
+          <h4>Ronde</h4>
+        </div>
+      </div>
+    </div>
+
+    <!--review-->
+    <h2 class="title">Review Pelanggan</h2>
+    <div id="reviews-container" class="container-review">
+      <!-- Anda dapat menambahkan lebih banyak ulasan pelanggan di sini -->
+    </div>
+
+    <!--formulir review-->
+    <h2 class="title">Tulis Review Anda</h2>
+    <form action="proses_review.php" method="POST">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required /><br />
+
+      <label for="rating">Rating:</label>
+      <input
+        type="number"
+        id="rating"
+        name="rating"
+        min="1"
+        max="5"
+        required
+      /><br />
+
+      <label for="ulasan">Ulasan:</label><br />
+      <textarea id="ulasan" name="ulasan" rows="4" required></textarea><br />
+
+      <input type="submit" value="Submit Review" id="formButton" />
+    </form>
+
+    <!----brands---->
+    <h2 class="title">Payment</h2>
+    <div class="brands">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-6">
+            <img src="../Image/Logo_baru_BRImo.svg.png" width="70px" />
+          </div>
+          <div class="col-6">
+            <img src="../Image/paypal.png" />
+          </div>
+          <div class="col-6">
+            <img src="../Image/ovo.png" />
+          </div>
+          <div class="col-6">
+            <img src="../Image/mastercard.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------footer----->
+    <div class="footer">
+      <div class="navbar-2">
+        <div class="footer-col-1">
+          <img src="../Image/logo-putih.png" />
+        </div>
+        <div class="footer-col-2">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              <i class="fa fa-phone"></i>
+              <a href="wa.me/6285241542496"> +62 852 4154 2496</a>
             </li>
-            <li class="nav-item">
-              <a href="./Product.html" class="nav-link">PRODUCT</a>
-            </li>
-            <li class="nav-item">
-              <a href="./about.html" class="nav-link">ABOUT US</a>
-            </li>
-            <li class="nav-item">
-              <a href="./contact.html" class="nav-link">CONTACT</a>
+            <br />
+            <li>
+              <i class="fa fa-envelope"></i>
+              <a href="https://www.indonary.id"> indonary@gmail.com</a>
             </li>
           </ul>
         </div>
-        <!-- <div class="nav-parent-collapse" x-show="expanded" x-collapse>
-                <ul class="nav-group-collapse">
-                    <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">PRODUCT</a></li>
-                    <li class="nav-item"><a href="./about.html" class="nav-link">ABOUT US</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
-                </ul>
-            </div> -->
-      </nav>
-      
-    </header>
+        <div class="footer-col-3">
+          <h3>Socials</h3>
+          <ul>
+            <li>
+              <i class="fa fa-instagram"></i>
+              <a href="https://www.instagram.com/indonary.id/"> @indonary.id</a>
+            </li>
+            <br />
+            <li>
+              <i class="fa fa-facebook"></i>
+              <a href="https://www.facebook.com/indonary.id/"> indonary.id</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <!-- content -->
-    <section class="profile">
-      <div class="profile-text">
-        <h1>Indonary</h1>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-          dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-          quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-          aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-          exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
-          ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in
-          ea voluptate velit esse quam nihil molestiae consequatur, vel illum
-          qui dolorem eum fugiat quo voluptas nulla pariatur?
-        </p>
-      </div>
-      <div class="profile-img">
-        <img
-          src="../pict/Logo merah.png"
-          alt="Logo Indonary"
-        />
-      </div>
-    </section>
+    <!----java script toggle menu---->
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
 
-    <section class="team">
-      <div class="team-title">
-        <h1>TOP MENU</h1>
-      </div>
-      <div class="team-profile">
-        <div class="team-img">
-          <div class="team-img-item">
-            <img src="../pict/menu-ayam betutu bali.jpg" alt="profile" />
-            <p>Ayam betutu bali</p>
-          </div>
-          <div class="team-img-item">
-            <img src="../pict/Menu - gado gado.jpg"" alt="profile" />
-            <p>gado-gado</p>
-          </div>
-          <div class="team-img-item">
-            <img src="../pict/Menu - Lodho Trenggalek.jpg" alt="profile" />
-            <p>Lodho Trenggalek</p>
-          </div>
-          <div class="team-img-item">
-            <img src="../pict/Menu - sate lilit bali.jpg" alt="profile" />
-            <p>sate lilit bali</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      function menutoggle() {
+        if (MenuItems.style.maxHeight === "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+    <script>
+      // JavaScript untuk menampilkan dan sembunyikan konten tambahan saat tombol ditekan
+      function BacaSembunyi() {
+        const tombolLihatSelengkapnya =
+          document.getElementById("lihat-selengkapnya");
+        const kontenTambahan = document.getElementById("informasi");
+        const titik = document.getElementById("titik");
 
-    <section class="form-section">
-      <h2 class="riview-pelanggan-header">REVIEW PELANGGAN</h2>
-      <div class="name-field-wrapper">
-        <label for="name" class="name-field">NAME : </label>
-        <input type="text" id="name" class="name-field-input" />
-      </div>
-      <br />
-      <div class="email-field-wrapper">
-        <label for="email" class="email-field">EMAIL :</label>
-        <input type="email" id="email" class="email-field-input" />
-      </div>
-      <br />
-      <div class="massage-field-wrapper">
-        <label for="massage" class="masage-field">MESSAGE : </label>
-        <textarea class="massage-field-input"></textarea>
-      </div>
-      <br />
-      <button type="submit">SUBMIT</button>
-    </section>
+        if (titik.style.display === "none") {
+          titik.style.display = "inline";
+          tombolLihatSelengkapnya.innerHTML = "Selengkapnya";
+          kontenTambahan.style.display = "none";
+        } else {
+          titik.style.display = "none";
+          tombolLihatSelengkapnya.innerHTML = "Sembunyikan";
+          kontenTambahan.style.display = "inline";
+        }
+      }
 
-    <footer>
-      <div class="contact">
-        <div class="contact-title">
-          <h5>Contact Us</h5>
-        </div>
-        <div class="contact-list">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <img src="../pict/tlp.png" alt="phone" />
-            </div>
-            <div class="contact-text">
-              <p>+62 812 3456 7890</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <img src="../pict/email.png" alt="mail" />
-            </div>
-            <div class="contact-text">
-              <p>indonary@gmail.com</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="contact">
-        <div class="contact-title">
-          <h5>Socials</h5>
-        </div>
-        <div class="contact-list">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <img src="../pict/instagram.png" alt="phone" />
-            </div>
-            <div class="contact-text">
-              <p>Indonary</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <img src="../pict/twitter.png" alt="mail" />
-            </div>
-            <div class="contact-text">
-              <p>Indonary</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+      //JavaScript untuk review submit :
+      const formButton = document.getElementById("formButton");
+      formButton.addEventListener("click", function () {
+        event.preventDefault();
+        alert("Berhasil Submit Review");
+      });
+    </script>
   </body>
 </html>
