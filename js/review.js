@@ -9,7 +9,7 @@ $(document).ready(function () {
           const reviewHtml = `
               <div class="customer-review">
                 <div class="customer-info">
-                  <img src="../Image/profil ikon.png" alt="Avatar" />
+                  <img src="Image/profil ikon.png" alt="Avatar" />
                   <h2>${review.name}</h2>
                 </div>
                 <div class="rating">
