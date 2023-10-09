@@ -46,7 +46,7 @@
         </div>
         <div class="form-contact">
             <h2 class="title">Contact Us</h2>
-            <form action="#" method="post" id="contact-form">
+            <form action="mailto:indonary@revou.com" method="post" id="contact-form">
                 <div class="form-title">
                     <p>If you have any questions, queries, or suggestions please do not hesitate to contact us through the form below.</p>
                 </div>
@@ -106,25 +106,6 @@
         </div>
     </div>
 </div>
-
-<script>
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        // Mengambil nilai dari input
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var message = document.getElementById("message").value;
-
-        // Menampilkan data yang diambil dari formulir di dalam konsol
-        console.log("Name: " + name);
-        console.log("Email: " + email);
-        console.log("Message: " + message);
-
-        // Di sini Anda dapat melakukan tindakan lain, seperti mengirim data ke server atau menyimpannya dalam database, sesuai dengan kebutuhan Anda.
-    
-    });
-</script>
 
 </body>
 

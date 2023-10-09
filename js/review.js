@@ -1,5 +1,13 @@
 $(document).ready(function () {
     const apiUrl = "https://backend-indonary-production.up.railway.app/review";
+
+    $("#reviewForm").submit(function (event) {
+      event.preventDefault();
+
+      var formData = $(this).serialize();
+
+      $.post('https://backend-indonary-production.up.railway.app/review', formData);
+  });
   
     $.ajax({
       url: apiUrl,
