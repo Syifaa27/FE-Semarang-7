@@ -4,6 +4,6 @@ $("#sendMsg").submit(function (event) {
 
     var formData = $(this).serialize();
 
-    $.post('https://backend-indonary-production.up.railway.app/message', formData);
+    $.post('https://be-semarang-7-production.up.railway.app/message', formData);
 });
 });
