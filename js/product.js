@@ -70,6 +70,11 @@ $(document).ready(function () {
     document.querySelector('select[name="menu_khas"]').addEventListener('change', sortMenuByCategory);
     sortMenuByCategory(); // Call the function initially to filter based on the default category.
 
+    if($("#searchButton").length) {
+        $("#searchButton").click(searchProducts);
+    }
+
+
     function searchProducts() {
         // Dapatkan kata kunci pencarian dari input
         var searchInput = document.getElementById('searchInput').value.toLowerCase();
