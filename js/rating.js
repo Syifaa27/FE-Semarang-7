@@ -4,7 +4,7 @@ $(document).ready(function() {
         headers: {
             "Content-Type": "application/json"
         },
-        url: "https://your-api-url-here",
+        url: "https://be-semarang-7-production.up.railway.app",
         success: function (data) {
             // Assuming 'data' is an array of review objects
             var reviewsHTML = '';
